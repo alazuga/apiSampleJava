@@ -97,8 +97,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh ("helm upgrade -i apiSample ${chartSrc}")
+                    withCredentials([file(credentialsId: 'kubectl-credentials', variable: 'KUBECONFIG')]) {
+                        echo "Deploying"
+                        sh "helm upgrade --install apiSample ${chartSrc}"
+                    }
                 }
+
             }
         }
 
