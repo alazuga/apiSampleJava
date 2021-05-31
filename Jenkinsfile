@@ -99,7 +99,7 @@ pipeline {
                 script {
                     withCredentials([file(credentialsId: 'kubectl-credentials', variable: 'KUBECONFIG')]) {
                         echo "Deploying"
-                        sh "helm upgrade --install apiSample ${chartSrc}"
+                        sh "helm upgrade --install apisamplejava ${chartSrc}"
                     }
                 }
 
