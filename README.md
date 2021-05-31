@@ -4,7 +4,7 @@ Simple demo application used for the implementation of the DevOps cycle.
 # Local development
 
 
-For local development developers can use the Scaffold tool, this tool automates the deployment process with a simple pipeline defined in scaffold.yaml file. Change the image name variable to upload the container to dockerhub.
+For local development, developers can use the Scaffold tool, this tool automates the deployment process with a simple pipeline defined in scaffold.yaml file. Change the image name variable to upload the container to dockerhub.
 
 ~~~
 $ vi skaffold.yaml
